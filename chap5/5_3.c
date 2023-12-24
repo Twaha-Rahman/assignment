@@ -9,8 +9,8 @@ int main() {
   scanf("%lf", &breadth);
 
   // we then print the area and the perimeter of the rectangle
-  printf("The area of the rectangle is: %.2lf", length * breadth);
-  printf("The perimeter of the rectangle is: %.2lf", 2 * (length + breadth));
+  printf("\nThe area of Rectangle is: %.2lf", length * breadth);
+  printf("\nThe perimeter of Rectangle is: %.2lf", 2 * (length + breadth));
 
   return 0;
 }
