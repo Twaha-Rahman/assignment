@@ -3,7 +3,9 @@
 int main() {
   // we take the number of seconds as input from the user
   int input;
+  printf("Enter the number of seconds: ");
   scanf("%d", &input);
+  printf("\n");
 
   // we then calculate the number of hours, minutes, seconds
   int hours = input / (60 * 60);
