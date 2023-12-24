@@ -12,7 +12,7 @@ int main() {
   double circumference = 2 * M_PI * r;
 
   // we then print the area and circumference of the circle
-  printf("The area and the circumference of the circle is %.2lf and %.2lf "
+  printf("\nThe area and the circumference of the circle is %.2lf and %.2lf "
          "respectively.",
          area, circumference);
 
