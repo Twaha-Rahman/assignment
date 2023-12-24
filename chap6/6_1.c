@@ -6,12 +6,17 @@ int is_date_valid(char *date_string, int string_len);
 int is_leap_year(int year);
 
 int main() {
-  char date_string[11];
+  // we take the date string from user's input (format: dd/mm/yyyy)
+  char date_string[14];
+  printf("\nPlease enter the date in the following format:\ndd/mm/yyyy\t(For "
+         "example: 11/02/2020)\n");
   printf("\nEnter the date: ");
   scanf("%s", date_string);
 
+  // we get input string's length
   int read_char_count = strlen(date_string);
 
+  // we check if the date is valid and print the appropriate message
   if (is_date_valid(date_string, read_char_count)) {
     printf("\nThe provided date is valid");
   } else {
@@ -21,6 +26,7 @@ int main() {
   return 0;
 }
 
+// this function will return 1 if the date is valid. Otherwise, it will return 0
 int is_date_valid(char *date_string, int string_len) {
   int day = 0, month = 0, year = 0;
 
@@ -67,8 +73,9 @@ int is_date_valid(char *date_string, int string_len) {
     return 0;
   }
 
-  // TODO: Discuss proper year count
-  if (year < 1 || year > 9999) {
+  // As long as the year is greater than 1, it is a valid
+  // year in the Gregorian calendar
+  if (year < 1) {
     return 0;
   }
 
