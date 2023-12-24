@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int calculate_y(int x);
+
+int main() {
+  // take the value of `x` as user input
+  int x;
+  printf("Please enter the value of `x`: ");
+  scanf("%d", &x);
+
+  // calculate the value of `y` and print it
+  printf("\nThe value of `y` is: %d", calculate_y(x));
+
+  return 0;
+}
+
+int calculate_y(int x) {
+  if (x < 50) {
+    return 2 * x + 100;
+  }
+  if (x > 50) {
+    return 5 * x - 200;
+  }
+  if (x == 50) {
+    return 3 * x + 300;
+  }
+}
