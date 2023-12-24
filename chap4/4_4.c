@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  // we take a numbers as an input from the user
+  // we take a number as an input from the user
   int input;
   printf("Please enter an integer: ");
   scanf("%d", &input);
