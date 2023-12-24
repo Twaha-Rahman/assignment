@@ -11,7 +11,7 @@ int main() {
   scanf("%d", &breadth);
 
   // we calculate the are of rectangle and print it
-  printf("\nThe are of the rectangle is: %d", length * breadth);
+  printf("\nThe area of the rectangle is: %d", length * breadth);
 
   return 0;
 }
