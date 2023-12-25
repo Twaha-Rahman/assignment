@@ -6,11 +6,11 @@ void parse_date(char *date_string, int string_len, int *result);
 int is_date_earlier(int *date_parts1, int *date_parts2);
 
 int main() {
-  char date_str1[11];
+  char date_str1[14];
   printf("\nEnter the first date: ");
   scanf("%s", date_str1);
 
-  char date_str2[11];
+  char date_str2[14];
   printf("\nEnter the second date: ");
   scanf("%s", date_str2);
 
