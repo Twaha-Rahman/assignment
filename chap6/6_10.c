@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 int main() {
+  // we take user input for the values of `a`, `b`, `c`
   int a, b, c;
   printf("\nA quadratic equation is of the form: ax²+bx+c\n");
   printf("\nEnter the value of `a`: ");
@@ -11,8 +12,10 @@ int main() {
   printf("\nEnter the value of `c`: ");
   scanf("%d", &c);
 
+  // we calculate the discriminant
   double discriminant = (b * b) - (4 * a * c);
 
+  // calculate the roots for: discriminant > 0
   if (discriminant > 0) {
     printf("\nThere are two roots and they are real numbers");
 
@@ -22,6 +25,7 @@ int main() {
     printf("\nThe roots are %lf and %lf", root1, root2);
   }
 
+  // calculate the root for: discriminant = 0
   if (discriminant == 0) {
     printf("\nThere is only one root and it is a real number");
 
@@ -29,6 +33,7 @@ int main() {
     printf("\nThe one and only root is: %lf", root);
   }
 
+  // calculate the roots for: discriminant < 0
   if (discriminant < 0) {
     printf("\nThere are two roots but both of them are imaginary numbers");
 
