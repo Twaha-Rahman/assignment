@@ -1,8 +1,11 @@
 #include <stdio.h>
 
+// funnction prototype
 double determine_interest_rate(int days, int deposited, int isSeniorCitizen);
 
 int main() {
+  // take user input for deposited amount, days deposited,
+  // and if the user is a senior citizen
   int deposited, days, isSeniorCitizen;
   printf("\nEnter the amount of deposit: ");
   scanf("%d", &deposited);
@@ -14,16 +17,21 @@ int main() {
          "0. Input: ");
   scanf("%d", &isSeniorCitizen);
 
+  // get the applicable interest rate
   double interest_rate =
       determine_interest_rate(days, deposited, isSeniorCitizen);
+  // calculate the amount to be given to the user
   double capital_with_interest = deposited + (deposited * interest_rate);
 
+  // print the amount to be given to the user
   printf("\nThe amount to be given to the customer: %.2lf",
          capital_with_interest);
 
   return 0;
 }
 
+// this funnction returns the interest rate based on all
+// the criteria laid out in the question
 double determine_interest_rate(int days, int deposited, int isSeniorCitizen) {
   double computed_interest_rate;
   if (days >= 30 && days <= 60) {

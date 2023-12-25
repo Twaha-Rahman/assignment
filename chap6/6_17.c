@@ -1,26 +1,31 @@
 #include <stdio.h>
 
+// define the constants
 #define TWO_LAKH 200000
 #define FIVE_LAKH 500000
 #define EIGHT_LAKH 800000
 #define TEN_LAKH 1000000
 
+// function prototypes
 double get_tax(long int income);
 
 int main() {
+  // get user input for the income
   long int income;
   printf("\nEnter the taxable income: ");
   scanf("%ld", &income);
 
-  printf("The inputted amount is: %ld", income);
-
+  // calculate the tax
   double tax = get_tax(income);
 
+  // print the tax
   printf("\nThe income tax will be: %lf", tax);
 
   return 0;
 }
 
+// this function calculates the amount of tax
+// based on the criteria provided in the question
 double get_tax(long int income) {
   if (income <= TWO_LAKH) {
     return 0;

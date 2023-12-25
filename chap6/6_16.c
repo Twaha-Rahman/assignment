@@ -1,6 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 
+// function prototype
 double to_radian(double degree);
 
 int main() {
