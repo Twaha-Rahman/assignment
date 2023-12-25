@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+// function prototypes
 int is_date_valid(char *date_string, int string_len);
 int is_leap_year(int year);
 
@@ -31,31 +32,41 @@ int is_date_valid(char *date_string, int string_len) {
   int day = 0, month = 0, year = 0;
 
   int date_string_part = 0;
-  int position = 0;
+  int digit_position = 0;
+
+  // we start parsing from the end of the string (excluding the null character)
   for (int i = string_len - 1; i >= 0; i--) {
+    // if we encounter a `/`, then we move on to the
+    // next part of the date string
     if (date_string[i] == '/') {
       date_string_part++;
-      position = 0;
+      digit_position = 0;
       continue;
     }
 
+    // by subtracting the ASCI character code, we get the digit in interger
     int digit = date_string[i] - '0';
+
+    // depending on which part of the date string we are
+    // parsing, we add to the corresponding part to parse
+    // the integer
     switch (date_string_part) {
     case 0:
-      year = year + (digit * pow(10, position));
-      position++;
+      year = year + (digit * pow(10, digit_position));
+      digit_position++;
       break;
     case 1:
-      month = month + (digit * pow(10, position));
-      position++;
+      month = month + (digit * pow(10, digit_position));
+      digit_position++;
       break;
     case 2:
-      day = day + (digit * pow(10, position));
-      position++;
+      day = day + (digit * pow(10, digit_position));
+      digit_position++;
       break;
     }
   }
 
+  // check if valid month
   if (month < 1 || month > 12) {
     return 0;
   }
@@ -69,6 +80,7 @@ int is_date_valid(char *date_string, int string_len) {
     days_in_month[1] = 29;
   }
 
+  // check number of days in the month
   if (day < 1 || day > days_in_month[month - 1]) {
     return 0;
   }
