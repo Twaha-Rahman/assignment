@@ -2,25 +2,27 @@
 #include <stdio.h>
 #include <string.h>
 
+// function prototypes
 void parse_date(char *date_string, int string_len, int *result);
 int is_date_earlier(int *date_parts1, int *date_parts2);
 
 int main() {
-  char date_str1[14];
+  // take user input for the two dates
+  // that we'll use for camparison
+  char date_str1[14], date_str2[14];
   printf("\nEnter the first date: ");
   scanf("%s", date_str1);
-
-  char date_str2[14];
   printf("\nEnter the second date: ");
   scanf("%s", date_str2);
 
-  int date_parts1[3];
+  int date_parts1[3], date_parts2[3];
   parse_date(date_str1, strlen(date_str1), date_parts1);
-  int date_parts2[3];
   parse_date(date_str2, strlen(date_str2), date_parts2);
 
+  // compare the dates with the help of the function
   int date_compare_result = is_date_earlier(date_parts1, date_parts2);
 
+  // print the appropriate message based on the result
   switch (date_compare_result) {
   case 0:
     printf("\nThe first date did NOT come before the second date");
@@ -35,6 +37,7 @@ int main() {
   return 0;
 }
 
+// this function parses the integers from the user input (which is a string)
 void parse_date(char *date_string, int string_len, int *result) {
 
   int day = 0, month = 0, year = 0;
@@ -65,12 +68,15 @@ void parse_date(char *date_string, int string_len, int *result) {
     }
   }
 
+  // we write the result in the array provided to us
   result[0] = day;
   result[1] = month;
   result[2] = year;
 }
 
-// returns 1 if the first date comes before the second date
+// this function returns 1 if the first date comes before the second date;
+// return 0, if the first date comes after the second date
+// return -2, if the dates are the same
 int is_date_earlier(int *date_parts1, int *date_parts2) {
   // compare the years
   if (date_parts1[2] < date_parts2[2]) {
