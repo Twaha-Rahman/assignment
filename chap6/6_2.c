@@ -95,10 +95,10 @@ int is_date_earlier(int *date_parts1, int *date_parts2) {
   // compare the days
   if (date_parts1[0] < date_parts2[0]) {
     return 1;
-  } else if (date_parts1[0] < date_parts2[0]) {
+  } else if (date_parts1[0] > date_parts2[0]) {
     return 0;
   }
 
-  // both of the dates are same, return -1 as the sentinel value
+  // both of the dates are same, return -1
   return -1;
 }
