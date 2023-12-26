@@ -44,7 +44,7 @@ int is_date_valid(char *date_string, int string_len) {
       continue;
     }
 
-    // by subtracting the ASCI character code, we get the digit in interger
+    // by subtracting the ascii character code, we get the digit in interger
     int digit = date_string[i] - '0';
 
     // depending on which part of the date string we are
