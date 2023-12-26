@@ -8,7 +8,7 @@ int is_leap_year(int year);
 
 int main() {
   // we take the date string from user's input (format: dd/mm/yyyy)
-  char date_string[14];
+  char date_string[15];
   printf("\nPlease enter the date in the following format:\ndd/mm/yyyy\t(For "
          "example: 11/02/2020)\n");
   printf("\nEnter the date: ");
@@ -21,7 +21,7 @@ int main() {
   if (is_date_valid(date_string, read_char_count)) {
     printf("\nThe provided date is valid");
   } else {
-    printf("\nThe provided date is NOT invalid");
+    printf("\nThe provided date is NOT valid");
   }
 
   return 0;
@@ -53,17 +53,15 @@ int is_date_valid(char *date_string, int string_len) {
     switch (date_string_part) {
     case 0:
       year = year + (digit * pow(10, digit_position));
-      digit_position++;
       break;
     case 1:
       month = month + (digit * pow(10, digit_position));
-      digit_position++;
       break;
     case 2:
       day = day + (digit * pow(10, digit_position));
-      digit_position++;
       break;
     }
+    digit_position++;
   }
 
   // check if valid month
