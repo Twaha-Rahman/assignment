@@ -25,13 +25,14 @@ int main() {
   // print the appropriate message based on the result
   switch (date_compare_result) {
   case 0:
-    printf("\nThe first date did NOT come before the second date");
+    printf("\nThe first date did NOT come before the second one");
     break;
   case 1:
-    printf("\nThe first date did come before the second date");
+    printf("\nThe first date did come before the second one");
     break;
   default:
     printf("\nThe provided dates are equal");
+    break;
   }
 
   return 0;
@@ -39,7 +40,6 @@ int main() {
 
 // this function parses the integers from the user input (which is a string)
 void parse_date(char *date_string, int string_len, int *result) {
-
   int day = 0, month = 0, year = 0;
 
   int date_string_part = 0;
