@@ -1,15 +1,19 @@
 #include <math.h>
 #include <stdio.h>
 
+// function prototype
 int is_armstrong(int num);
 
 int main() {
+  // get user input for the upperbound
+  // and the lower bound of the loop
   int lower, upper;
   printf("Enter the lower bound of the loop: ");
   scanf("%d", &lower);
   printf("Enter the upper bound of the loop: ");
   scanf("%d", &upper);
 
+  // print all the Armstrong numbers in the range
   for (int i = lower; i <= upper; i++) {
     if (is_armstrong(i)) {
       printf("\n%d", i);
@@ -19,6 +23,8 @@ int main() {
   return 0;
 }
 
+// this function retruns 1 if a number is an Armstrong
+// number; Otherwise, it returns 0
 int is_armstrong(int num) {
   int input, remainder, digits = 0;
   double res = 0.0;

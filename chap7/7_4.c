@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+  // get user input for the value of m, n, d
   int m, n, d;
   printf("Enter the lower bound (m): ");
   scanf("%d", &m);
@@ -10,6 +11,8 @@ int main() {
          "(d): ");
   scanf("%d", &d);
 
+  // if any number is divisible by the number d, then
+  // print it
   for (int i = m; i <= n; i++) {
     if (i % d == 0) {
       printf("\n%d", i);
