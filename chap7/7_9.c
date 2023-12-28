@@ -17,6 +17,7 @@ int main() {
   // set the variables for the initial fraction
   int numerator = 5;
   int denominator = 11;
+  // this variable dictates the positive or negative sign
   double sign = -1.0;
 
   // calculate the sum upto the n-th term
