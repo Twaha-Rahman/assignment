@@ -1,15 +1,16 @@
 #include <stdio.h>
 
+// function prototype
 int is_right_angled(int a, int b, int c);
 
 int main() {
-  // take the values of `a`, `b`, `c` from user input
+  // take the values of a, b, c from user input
   int a, b, c;
-  printf("\nEnter the value for `a`: ");
+  printf("\nEnter the value for a: ");
   scanf("%d", &a);
-  printf("\nEnter the value for `b`: ");
+  printf("\nEnter the value for b: ");
   scanf("%d", &b);
-  printf("\nEnter the value for `c`: ");
+  printf("\nEnter the value for c: ");
   scanf("%d", &c);
 
   if (is_right_angled(a, b, c)) {
@@ -21,8 +22,8 @@ int main() {
   return 0;
 }
 
-// the function will return 1 if the triangle is a right angled triangle; it'll
-// return  0 otherwise
+// the function will return 1 if the triangle is a right angled triangle;
+// otherwise, it'll return 0
 int is_right_angled(int a, int b, int c) {
   int a_square = a * a, b_square = b * b, c_square = c * c;
 

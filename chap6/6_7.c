@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  // take user input for the `color code`
+  // take user input for the color code
   int color_code;
   printf("Please enter the color code: ");
   scanf("%d", &color_code);
@@ -22,9 +22,6 @@ int main() {
     break;
   case 5:
     printf("Purple");
-    break;
-  default:
-    printf("No matching color code...");
     break;
   }
 

@@ -9,9 +9,8 @@ int main() {
   int deposited, days, isSeniorCitizen;
   printf("\nEnter the amount of deposit: ");
   scanf("%d", &deposited);
-  printf(
-      "\nEnter the number of days the deposited amount is going to be in the "
-      "bank: ");
+  printf("\nEnter the number of days the deposited amount is going to be in the"
+         " bank: ");
   scanf("%d", &days);
   printf("\nIf this deposit is for a senior citizen, enter 1. Otherwise, enter "
          "0. Input: ");
@@ -23,7 +22,7 @@ int main() {
   // calculate the amount to be given to the user
   double capital_with_interest = deposited + (deposited * interest_rate);
 
-  // print the amount to be given to the user
+  // print the amount to be given
   printf("\nThe amount to be given to the customer: %.2lf",
          capital_with_interest);
 

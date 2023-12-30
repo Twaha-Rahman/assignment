@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main() {
-  // take the input from the user for the roman symbol
+  // take a Roman symbol as user input
   char roman_symbol;
   printf("\nEnter a roman symbol: ");
   scanf("%c", &roman_symbol);
 
-  // print the appropriate message for the corresponding roman symbol
+  // print the appropriate message for the corresponding Roman symbol
   switch (roman_symbol) {
   case 'I':
     printf("1");

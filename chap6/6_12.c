@@ -1,13 +1,14 @@
 #include <stdio.h>
 
+// function prototype
 void point_relative_to_circle(int x, int y, int r);
 
 int main() {
-  // get user input for the `x` and `y` co-ordinates of the point
+  // get user input for the x and y co-ordinates of the point
   int x, y;
-  printf("Enter the value of `x`: ");
+  printf("Enter the value of x: ");
   scanf("%d", &x);
-  printf("Enter the value of `y`: ");
+  printf("Enter the value of y: ");
   scanf("%d", &y);
 
   point_relative_to_circle(x, y, 5);

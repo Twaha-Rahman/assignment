@@ -9,7 +9,7 @@ int is_date_earlier(int *date_parts1, int *date_parts2);
 int main() {
   // take user input for the two dates
   // that we'll use for camparison
-  char date_str1[14], date_str2[14];
+  char date_str1[15], date_str2[15];
   printf("\nEnter the first date: ");
   scanf("%s", date_str1);
   printf("\nEnter the second date: ");
@@ -75,8 +75,8 @@ void parse_date(char *date_string, int string_len, int *result) {
 }
 
 // this function returns 1 if the first date comes before the second date;
-// return 0, if the first date comes after the second date
-// return -2, if the dates are the same
+// returns 0, if the second date came before the first one;
+// return -1, if the dates are equal
 int is_date_earlier(int *date_parts1, int *date_parts2) {
   // compare the years
   if (date_parts1[2] < date_parts2[2]) {

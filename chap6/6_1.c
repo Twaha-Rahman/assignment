@@ -7,7 +7,7 @@ int is_date_valid(char *date_string, int string_len);
 int is_leap_year(int year);
 
 int main() {
-  // we take the date string from user's input (format: dd/mm/yyyy)
+  // we take the date string from user input (format: dd/mm/yyyy)
   char date_string[15];
   printf("\nPlease enter the date in the following format:\ndd/mm/yyyy\t(For "
          "example: 11/02/2020)\n");
@@ -34,7 +34,7 @@ int is_date_valid(char *date_string, int string_len) {
   int date_string_part = 0;
   int digit_position = 0;
 
-  // we start parsing from the end of the string (excluding the null character)
+  // we start parsing from the end of the string (excluding null character)
   for (int i = string_len - 1; i >= 0; i--) {
     // if we encounter a `/`, then we move on to the
     // next part of the date string
@@ -48,7 +48,7 @@ int is_date_valid(char *date_string, int string_len) {
     int digit = date_string[i] - '0';
 
     // depending on which part of the date string we are
-    // parsing, we add to the corresponding part to parse
+    // parsing, we multiply and add to the corresponding part to parse
     // the integer
     switch (date_string_part) {
     case 0:
@@ -78,7 +78,7 @@ int is_date_valid(char *date_string, int string_len) {
     days_in_month[1] = 29;
   }
 
-  // check number of days in the month
+  // check the number of days in the month
   if (day < 1 || day > days_in_month[month - 1]) {
     return 0;
   }
