@@ -5,8 +5,8 @@
 int is_armstrong(int num);
 
 int main() {
-  // get user input for the upperbound
-  // and the lower bound of the loop
+  // get user input for the upper and
+  // lower bound of the loop
   int lower, upper;
   printf("Enter the lower bound of the loop: ");
   scanf("%d", &lower);

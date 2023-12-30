@@ -17,15 +17,14 @@ int main() {
   int sign = -1;
 
   // sum up to the n-th term
-  for (int i = 1; i < n; ++i) {
+  for (int i = 1; i < n; i++) {
     res += (sign * pow(x, denominator)) / factorial(denominator);
     denominator += 2;
     sign *= -1;
   }
 
   // print the sum
-  printf("Evaluation of the cosine series when x = %.2lf, and with %d number "
-         "of terms = %.2lf\n",
+  printf("If x = %.2lf and n = %d, the evaluation of cosine series is: %.2lf",
          x, n, res);
   return 0;
 }
@@ -37,7 +36,7 @@ double factorial(int num) {
   }
 
   double factorial = 1;
-  for (int i = 1; i <= num; ++i) {
+  for (int i = 1; i <= num; i++) {
     factorial *= i;
   }
   return factorial;

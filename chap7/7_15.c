@@ -6,8 +6,8 @@ int main() {
 
   // print the pattern
   for (int line = 1; line <= row; line++) {
-    for (int j = 1; j <= line; j++) {
-      printf("%d ", j);
+    for (int i = 1; i <= line; i++) {
+      printf("%d ", i);
     }
     printf("\n");
   }

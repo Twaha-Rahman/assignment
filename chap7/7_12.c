@@ -16,7 +16,7 @@ int main() {
   double result = 1.0;
 
   // sum upto the n-th term
-  for (int i = 1; i < n; ++i) {
+  for (int i = 1; i < n; i++) {
     result += pow(x, i) / factorial(i);
   }
 
@@ -35,7 +35,7 @@ double factorial(int num) {
   }
 
   double factorial = 1;
-  for (int i = 1; i <= num; ++i) {
+  for (int i = 1; i <= num; i++) {
     factorial *= i;
   }
   return factorial;

@@ -17,7 +17,7 @@ int main() {
   }
 
   // print the sum
-  printf("Sum is %f", sum);
+  printf("Sum is %.2f", sum);
 
   return 0;
 }

@@ -6,14 +6,14 @@ int main() {
 
   // print the pattern
   for (int line = 1; line <= n; line++) {
-    for (int j = n - line; j >= 0; j--) {
+    for (int i = n - line; i >= 0; i--) {
       printf("  ");
     }
-    for (int k = line; k >= 1; k--) {
-      printf("%d ", k);
+    for (int j = line; j >= 1; j--) {
+      printf("%d ", j);
     }
-    for (int l = 2; l <= line; l++) {
-      printf("%d ", l);
+    for (int k = 2; k <= line; k++) {
+      printf("%d ", k);
     }
     printf("\n");
   }

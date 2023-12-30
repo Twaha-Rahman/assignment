@@ -15,7 +15,7 @@ int main() {
   return 0;
 }
 
-// this function calculates the factorial
+// the following function calculates the factorial
 int factorial(int n) {
   int result = 1;
   for (int i = 1; i <= n; i++) {

@@ -6,8 +6,8 @@ int main() {
   int column = 1;
 
   // print the pattern
-  for (int i = 1; i <= rows; ++i) {
-    for (int j = 1; j <= 3; ++j) {
+  for (int i = 1; i <= rows; i++) {
+    for (int j = 1; j <= 3; j++) {
       printf("%d ", column++);
     }
     printf("\n");

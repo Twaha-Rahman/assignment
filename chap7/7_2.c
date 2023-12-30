@@ -11,7 +11,7 @@ int main() {
   printf("Enter a number: ");
   scanf("%s", input);
 
-  // convert the input to number
+  // convert the input to integer
   int number_int = atoi(input);
 
   // check if the number is an Armstrong number and
