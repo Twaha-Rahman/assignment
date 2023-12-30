@@ -19,7 +19,7 @@ int main() {
   double tax = get_tax(income);
 
   // print the tax
-  printf("\nThe income tax will be: %lf", tax);
+  printf("\nThe income tax will be: %.2lf", tax);
 
   return 0;
 }
